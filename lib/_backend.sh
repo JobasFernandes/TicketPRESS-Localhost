@@ -56,7 +56,7 @@ backend_set_env() {
 sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/backend/.env
 NODE_ENV=
-BACKEND_URL=${backend_url}
+BACKEND_URL=${backend_url}:${backend_port}
 FRONTEND_URL=${frontend_url}:${frontend_port}
 PROXY_PORT=${backend_port}
 PORT=${backend_port}
